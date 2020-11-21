@@ -10,6 +10,7 @@ const styles = theme => ({
   },
   media: {
     height: 140,
+    width: 270
   },
 });
 
@@ -27,8 +28,7 @@ class CardPage extends Component{
   render(){
     const {classes} = this.props
   return (
-    <Card className={classes.root} style={{maxWidth:"228px"}}>
-      <CardActionArea>
+    <Card className={classes.root}>
         <CardMedia
           className={classes.media}
           image={this.props.image}
@@ -38,7 +38,6 @@ class CardPage extends Component{
             {this.state.title}
           </Typography>
         </CardContent>
-      </CardActionArea>
       <CardActions>
       {/*how to pass props through a link*/}
       <Link to={{
