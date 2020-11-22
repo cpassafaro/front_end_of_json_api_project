@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import axios from 'axios'
 import { Typography, Grid } from "@material-ui/core/";
 import { CircularProgress } from "@material-ui/core/";
-import Card from "./CardPage";
+import Card from "./Components/CardPage";
+import './App.css'
 ///coment
 
 export default class Home extends Component {
@@ -277,7 +278,7 @@ export default class Home extends Component {
       return <CircularProgress color='secondary'/>;
     } else {
       return (
-        <Typography>
+        <Typography className='body'>
           <Grid container direction="row" justify="space-around">
             <Card
               title="Nordic Cuisine"

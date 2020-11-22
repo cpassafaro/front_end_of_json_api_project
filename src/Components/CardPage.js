@@ -2,16 +2,25 @@ import React, {Component} from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import {Card, CardActionArea, CardActions, CardContent, CardMedia, Button, Typography} from '@material-ui/core';
 import {Link} from "react-router-dom";
+import { SignalWifi1BarLock } from '@material-ui/icons';
 
 //this is how you add styling if it is a class component
 const styles = theme => ({
   root: {
     maxWidth: 345,
+    border:'2px solid #71566C'
   },
   media: {
     height: 140,
     width: 270
   },
+  header:{
+    backgroundColor: 'gray',
+    // opacity: '0.2'
+  },
+  text:{
+    color:'black'
+  }
 });
 
 class CardPage extends Component{
@@ -33,8 +42,8 @@ class CardPage extends Component{
           className={classes.media}
           image={this.props.image}
         />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+        <CardContent className={classes.header}>
+          <Typography gutterBottom variant="h5" component="h2" className={classes.text}>
             {this.state.title}
           </Typography>
         </CardContent>

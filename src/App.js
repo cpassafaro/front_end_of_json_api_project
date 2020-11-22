@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import CreateRecipe from "./CreateRecipe";
-import Header from "./Header";
-import Update from "./Update";
+import CreateRecipe from "./Components/CreateRecipe";
+import Header from "./Components/Header";
+import Update from "./Components/Update";
 import Home from "./Home";
 import RecipeTile from './RecipeTile';
 import Success from './status/Success';
@@ -47,7 +47,7 @@ class App extends Component {
       );
     } else {
       return (
-        <div>
+        <div className='body'>
           <nav>
             <Link exact to="/"></Link>
             <Link to="/new"></Link>

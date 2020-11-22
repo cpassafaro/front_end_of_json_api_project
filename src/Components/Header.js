@@ -1,24 +1,28 @@
 import React from "react";
-import "./Header.css";
 import {
   AppBar,
   Toolbar,
   Typography,
-  IconButton,
   Button
 } from "@material-ui/core/";
-import { Route, Link, Redirect } from "react-router-dom";
+import {Link} from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 
 //how you override the defaults of the material ui values
 const useSytles = makeStyles({
+  header:{
+    // opacity: 0.2,
+    width: '100%',
+    margin: 0,
+    color:'black'
+  },
   buttonStyle: {
     color: "white",
     display: "flex",
     justifyContent: "space-around",
     textDecoration:'underline',
-    // border:'none'
+
   },
   recipesStyle: {
     display: "flex",
@@ -37,9 +41,8 @@ export default function Header() {
   const classes = useSytles();
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" className={classes.header}>
       <Toolbar>
-        <IconButton edge="start" color="primary" aria-label="menu"></IconButton>
         <div className={classes.container}>
           <Link to="/">
             <Typography variant="h6" className={classes.recipesStyle}>
